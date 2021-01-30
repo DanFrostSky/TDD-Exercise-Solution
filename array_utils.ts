@@ -2,7 +2,7 @@ export default class ArrayUtility
 {
     findHighestNumber( theArray: any )
     {
-        let result:[];
+        let result = null;
 
         return result;
     }
