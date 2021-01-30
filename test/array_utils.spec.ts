@@ -21,4 +21,30 @@ describe('find the highest number', function() {
         // assert...
         expect(actualResult).to.equal(expectedResult);
     });
+
+    it('array has one item, return item at [0]', function() {
+        // arrange...
+        let cut = new ArrayUtility();
+        let inputArray = [11];
+        let expectedResult = 11;
+
+        // act...
+        let actualResult = cut.findHighestNumber(inputArray);
+
+        // assert...
+        expect(actualResult).to.equal(expectedResult);
+    });
+
+    it('array has two items [x,y] where x < y, return item at [0]', function() {
+        // arrange...
+        let cut = new ArrayUtility();
+        let inputArray = [13, 11];
+        let expectedResult = 13;
+
+        // act...
+        let actualResult = cut.findHighestNumber(inputArray);
+
+        // assert...
+        expect(actualResult).to.equal(expectedResult);
+    });
 });
