@@ -35,7 +35,7 @@ describe('find the highest number', function() {
         expect(actualResult).to.equal(expectedResult);
     });
 
-    it('array has two items [x,y] where x < y, return item at [0]', function() {
+    it('array has two items [x,y] where x > y, return item at [0]', function() {
         // arrange...
         let cut = new ArrayUtility();
         let inputArray = [13, 11];
