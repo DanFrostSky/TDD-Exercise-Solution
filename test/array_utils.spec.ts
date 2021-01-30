@@ -68,4 +68,17 @@ describe('find the highest number', function() {
         // assert...
         expect(actualResult).to.equal(expectedResult);
     });
+
+    it('array of several items, return the histest item', function() {
+        // arrange...
+        let cut = new ArrayUtility();
+        let inputArray = [11, 5, 13, 37, 9, 67, 19];
+        let expectedResult = 67;
+
+        // act...
+        let actualResult = cut.findHighestNumber(inputArray);
+
+        // assert...
+        expect(actualResult).to.equal(expectedResult);
+    });
 });
