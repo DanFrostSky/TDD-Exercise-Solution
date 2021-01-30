@@ -1,12 +1,6 @@
 import {expect} from "chai";
 import ArrayUtility from "../array_utils";
 
-console.log( Number.MIN_VALUE);
-
-if( Number.MIN_VALUE < -1 )
-    console.log("Oh this is low");
-
-
 
 describe('find the highest number', function() {
     it('an empty array, return null', function() {
@@ -62,4 +56,16 @@ describe('find the highest number', function() {
         expect(actualResult).to.equal(expectedResult);
     });
 
+    it('array has three items [x,y,z] where z > x > y, return item at [2]', function() {
+        // arrange...
+        let cut = new ArrayUtility();
+        let inputArray = [11, 5, 13];
+        let expectedResult = 13;
+
+        // act...
+        let actualResult = cut.findHighestNumber(inputArray);
+
+        // assert...
+        expect(actualResult).to.equal(expectedResult);
+    });
 });

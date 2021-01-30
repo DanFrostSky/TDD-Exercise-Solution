@@ -6,10 +6,13 @@ export default class ArrayUtility
 
         if( theArray.length > 0 )
         {
-            result = theArray[0];
+            result = -Number.MAX_SAFE_INTEGER;
 
-            if( theArray.length > 1 && theArray[1] > result )
-                result = theArray[1];
+            for( let idx = 0; idx < theArray.length; idx++ )
+            {
+                if( theArray[idx] > result )
+                    result = theArray[idx];
+            }
         }
 
         return result;
